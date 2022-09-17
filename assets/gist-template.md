@@ -40,7 +40,7 @@ It may look confusing now but we are going to break down the rejex to further ex
 
 Anchor in our example: ^ , $
 
-Its purpose: Matches the position before `^` or the position after `$` a character. Checks if the string matches a pattern.
+Its purpose: A character that checks if the string matches a pattern. `^` Matches the position before. `$` Matches the position after.
 
 ### Quantifiers
 
@@ -62,41 +62,41 @@ Its purpose:
 
 `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 
-Bracket expression in our example:
+Bracket expression in our example: `[*******]`
 
-Its purpose:
+Its purpose: The brackets `[]` is to indicate a set of characters to match. In our example the brackets contain the following `a-f0-9`, which is the format required to match a valid hex code. If the user writes in an invalid set or differently formatted set, the hex code will be invalid.
 
 ### Character Classes
 
 `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 
-Character class in our example:
+Character class in our example: `a-f0-9`
 
-Its purpose:
+Its purpose: The character class is the set of characters that is enclosed within the brackets. The `a-f` symbolize the range the hex code requires, meaning the code can begin with any letter between `a` though `f`. Also the hex code has `0-9` attached immediately after the `f`, which also allows the hex code to begin with any digit from `0` to `9`.
 
 ### The OR Operator
 
 `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 
-OR operator in our example:
+OR operator in our example: `|`
 
-Its purpose?
+Its purpose: Allows the user to match either the expression/characters on the left or the right. The `|` is positioned in between two seperate expressions. One being `[a-f0-9]{6}` and the other being `[a-f0-9]{3}`. Simply putting the OR operator in between allows the user the ability to choose either one.
 
 ### Flags
 
 `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 
-Flag in our example?
+Flag in our example:
 
-Its purpose?
+Its purpose:
 
 ### Character Escapes
 
 `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 
-Character escape in our example?
+Character escape in our example:
 
-Its purpose?
+Its purpose:
 
 ## Author
 
