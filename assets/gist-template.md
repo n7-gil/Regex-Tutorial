@@ -25,14 +25,13 @@ It may look confusing now but we are going to break down the rejex to further ex
 
 ## Regex Components
 
--Anchors
--Quantifiers
--Grouping Constructs
--Bracket Expressions
 -Character Classes
--The OR Operator
--Flags
--Character Escapes
+-Groups
+-Quantifiers
+-Backreferences
+-Anchors, Boundaries, Delimiters
+-Lookarounds
+-Modifiers
 
 ### Anchors
 
@@ -80,24 +79,26 @@ Its purpose: The character class is the set of characters that is enclosed withi
 
 OR operator in our example: `|`
 
-Its purpose: Allows the user to match either the expression/characters on the left or the right. The `|` is positioned in between two seperate expressions. One being `[a-f0-9]{6}` and the other being `[a-f0-9]{3}`. Simply putting the OR operator in between allows the user the ability to choose either one.
+Its purpose: Allows the user to match either the expression/characters on the left or the right. The `|` is positioned in between two seperate expressions. One being `[a-f0-9]{6}` and the other being `[a-f0-9]{3}`. Simply putting the OR operator in between allows the user the ability to choose either one. The difference between the two is the quantifier `{}`. One expression has a quantifier of `{6}` which allows for 6 characters, the other has a `{3}` quantifier which allows for 3 characters.
 
 ### Flags
 
 `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 
-Flag in our example:
+Flag in our example: N/A
 
-Its purpose:
+Its purpose: Our example does not contain any flags, as flags are optional. The purpose of flags are to change the default searching behavior of the Regex. There are 6 different flags: `i` which ignores casing, `g` which makes the expression search for all occurrences, `s` makes the dot character match new lines, `m` makes the boundary characters match the beginning/ending of every lone instead of just the beginning/end of the string, `y` makes the expression start its searching from its last index property, and `u` makes the expression match 32-bit characters as well as the other charachters.
 
 ### Character Escapes
 
 `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 
-Character escape in our example:
+Character escape in our example: N/A
 
-Its purpose:
+Its purpose: We also do not have a character escape in our regex. The character escape uses the `\` character. It's commently used to create new lines `\n`, to tab `\t`, and for a two digit hex code `\xhh`.
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+My name is Gilberto Escobedo and I have been coding for 4 months now. Currently enrolled in a Full Stack Web Engineering bootcamp with the University of California, Riverside. Having a background in business management and a passion for communication, my ultimate goal is to become a scrum master and assist engineers in managing their projects and working efficiency.
+
+Check out other projects I have worked on! https://github.com/n7-gil
